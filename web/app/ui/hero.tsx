@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section className={inter.className}>
       {/* Oligo-style outer padding/frame */}
-      <div className="mx-auto max-w-[1440px] px-[22px]">
+      <div className="mx-auto max-w-[1920px] px-[8px]">
         {/* Hero card: rounded, full-bleed feel */}
         <div
           className={[
@@ -52,7 +52,7 @@ export default function Hero() {
                 "text-white",
                 "font-semibold tracking-[-0.02em] leading-[0.9]",
                 // responsive “Oligo-sized” type
-                "text-[clamp(72px,11vw,220px)]",
+                "text-[clamp(64px,12vw,300px)]",
                 "drop-shadow-[0_2px_24px_rgba(0,0,0,0.35)]",
               ].join(" ")}
             >

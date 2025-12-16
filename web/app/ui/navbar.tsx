@@ -13,7 +13,6 @@ export default function Navbar() {
         inter.className,
         "sticky top-0 z-50",
         "h-[72px] bg-white",
-        "border-b border-black/10",
       ].join(" ")}
     >
       <div className="mx-auto grid h-full max-w-[1280px] grid-cols-[56px_1fr_auto] items-center px-[22px]">
