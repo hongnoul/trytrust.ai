@@ -1,5 +1,5 @@
-// app/ui/navbar.tsx
-'use client';
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -11,7 +11,8 @@ export default function Navbar() {
     <header
       className={[
         inter.className,
-        "sticky top-0 z-50 h-[72px] bg-white",
+        "sticky top-0 z-50",
+        "h-[72px] bg-white",
         "border-b border-black/10",
       ].join(" ")}
     >
@@ -30,10 +31,10 @@ export default function Navbar() {
 
         {/* Center: nav */}
         <nav aria-label="Primary" className="justify-self-center">
-          <ul className="flex items-center gap-[140px] text-[14px] tracking-[0.01em] text-black/90">
+          <ul className="flex items-center gap-[140px] text-[14px] font-medium tracking-[0.01em] text-black/90">
             <li>
-              <Link href="/services" className="font-medium hover:text-black">
-                Services{" "}
+              <Link href="/services" className="hover:text-black">
+                Services
                 <sup className="ml-[2px] align-super text-[10px] font-semibold text-black/60">
                   4
                 </sup>
@@ -41,23 +42,20 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/careers" className="font-medium hover:text-black">
+              <Link href="/careers" className="hover:text-black">
                 Careers
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/mission-configurator"
-                className="font-bold hover:text-black"
-              >
+              <Link href="/mission-configurator" className="font-bold hover:text-black">
                 Mission Configurator
               </Link>
             </li>
           </ul>
         </nav>
 
-        {/* Right: contact + hamburger (no extra icon) */}
+        {/* Right */}
         <div className="flex items-center justify-self-end gap-4">
           <Link
             href="/contact"
@@ -71,13 +69,7 @@ export default function Navbar() {
             aria-label="Open menu"
             className="inline-flex h-[44px] w-[44px] items-center justify-center rounded-[10px] border border-black/10 bg-white hover:bg-black/[0.02]"
           >
-            <svg
-              viewBox="0 0 24 24"
-              width="22"
-              height="22"
-              aria-hidden="true"
-              focusable="false"
-            >
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
               <path
                 d="M4 7h16M4 12h16M4 17h16"
                 stroke="currentColor"
