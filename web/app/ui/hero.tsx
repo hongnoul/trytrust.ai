@@ -16,14 +16,11 @@ const inter = Inter({
 export default function Hero() {
   return (
     <section className={inter.className}>
-      {/* Oligo-style outer padding/frame */}
-      <div className="mx-auto max-w-[1920px] px-[8px]">
-        {/* Hero card: rounded, full-bleed feel */}
+      <div className="mx-auto max-w-[1920px] px-[5px]">
         <div
           className={[
-            "relative overflow-hidden rounded-[28px]",
-            // fill the viewport under the sticky navbar (72px + 1px border)
-            "h-[calc(100svh-73px-22px)]",
+            "relative overflow-hidden rounded-bl-[24px] rounded-br-[24px]",
+            "h-[870px]",
             "bg-black",
           ].join(" ")}
         >
