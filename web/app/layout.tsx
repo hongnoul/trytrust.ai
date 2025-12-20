@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "./ui/Nav";
+import Transition from "./providers/Transition";
 
 export const metadata: Metadata = {
   title: "TrustAI",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Nav />
-        {children}
+        <Transition>
+          <Nav />
+          {children}
+        </Transition>
       </body>
     </html>
   );
