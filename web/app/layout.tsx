@@ -4,6 +4,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "./ui/Nav";
+import Foot from "./ui/Foot";
 import Transition from "./providers/Transition";
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Transition>
           <Nav />
           {children}
+          <Foot />
         </Transition>
       </body>
     </html>

@@ -23,6 +23,6 @@
 
 .transition-block {
   position: absolute;
-  background-color: var(--foreground);
+  background-color: #3a51a3;
   opacity: 0;
 }

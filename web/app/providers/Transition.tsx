@@ -1,5 +1,3 @@
-// /web/app/providers/Transition.tsx
-
 "use client";
 
 import { useEffect, useRef, PropsWithChildren } from "react";
@@ -11,7 +9,6 @@ const BLOCK_SIZE = 60;
 export default function Transition({ children }: PropsWithChildren) {
   const gridRef = useRef<HTMLDivElement>(null);
   const blocksRef = useRef<HTMLDivElement[]>([]);
-  const didInitRef = useRef(false);
 
   const createGrid = () => {
     const container = gridRef.current;

@@ -3,18 +3,45 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
 export default function Hero() {
   return (
     <section className={inter.className}>
       <div className="mx-auto max-w-480 px-1.25">
-        <div className="relative h-[870px] overflow-hidden rounded-bl-3xl rounded-br-3xl bg-black">
-          <Image src="/pixabay.jpg" alt="Hero background" fill className="absolute inset-0 object-cover" />
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="pointer-events-none absolute inset-0 rounded-[28px] backdrop-blur-[18px] [mask-image:radial-gradient(ellipse_at_center,transparent_55%,black_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,transparent_55%,black_100%)]" />
+        <div
+          className={[
+            "relative overflow-hidden rounded-bl-3xl rounded-br-3xl bg-black",
+            "h-[calc(100svh-64px)] md:h-[calc(99svh-72px)]",
+            "min-h-140",
+          ].join(" ")}
+        >
+          <Image
+            src="/pixabay.jpg"
+            alt="Hero background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
 
-          <div className="absolute left-7 top-9 z-10 text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.35)]">
+          <div className="pointer-events-none absolute inset-0 bg-black/15" />
+
+          <div
+            className={[
+              "pointer-events-none absolute inset-0",
+              "bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_40%,rgba(0,0,0,0.70)_100%)]",
+            ].join(" ")}
+          />
+
+          <div
+            className={[
+              "pointer-events-none absolute inset-0",
+              "bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0)_35%,rgba(0,0,0,0.55)_100%)]",
+            ].join(" ")}
+          />
+
+          <div className="absolute left-7 top-9 z-10 text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.35)]">
             <div className="text-[clamp(64px,12vw,300px)] font-semibold leading-[0.9] tracking-[-0.02em]">
               TrustAI
             </div>

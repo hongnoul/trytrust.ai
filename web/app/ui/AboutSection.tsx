@@ -1,5 +1,9 @@
 import Image from "next/image";
 
+const BLANK =
+  "data:image/svg+xml;utf8," +
+  `<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"/>`;
+
 export default function AboutSection() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-24">
@@ -22,7 +26,7 @@ export default function AboutSection() {
         <div className="md:col-span-8">
           <div className="mb-10">
             <Image
-              src="/inline.svg"
+              src={BLANK}
               alt="TrustAI"
               width={256}
               height={256}
